@@ -8,7 +8,7 @@ def djb2(string):
     hash = 5381
     for char in string:
         hash = hash * 33 + ord(char)
-    return hash % 1000000000000000000000
+    return hash % 18446744073709551616
 
 
 def random_word():
@@ -24,8 +24,8 @@ def main():
         hash = djb2(word)
         checked += 1
         total_checked += 1
-        if hash < 100000000000000000:
-            print(f'{word} -> {hash:021d} checked: {checked}')
+        if hash < 1000000000000000:
+            print(f'{word} -> {hash:020d} checked: {checked}')
             checked = 0
     end_time = time()
     time_elapsed = end_time - start_time
