@@ -33,4 +33,5 @@ def main():
     print(f'{total_checked} strings checked in {time_elapsed:.2f} seconds. {checked_per_second:.0f} checked per second.')
 
 
-main()
+if __name__ == '__main__':
+    main()
